@@ -1,0 +1,7 @@
+ok so
+
+i've been working on this voodoo-opt thing for a bit.  and, it's ok. it primes some basics, puts them on tap.
+
+but i want a multi-level extensible system.
+
+`~/.config/voodoo-opt` should accept plugins, and they should empower & enable all voodoo-opt using programs.
