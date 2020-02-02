@@ -1,3 +1,5 @@
+# multi-level pluggability
+
 ok so
 
 i've been working on this voodoo-opt thing for a bit.  and, it's ok. it primes some basics, puts them on tap.
@@ -5,3 +7,9 @@ i've been working on this voodoo-opt thing for a bit.  and, it's ok. it primes s
 but i want a multi-level extensible system.
 
 `~/.config/voodoo-opt` should accept plugins, and they should empower & enable all voodoo-opt using programs.
+
+if you extend voodoo-opt, ~/.config/your-layer should plug too. more and more layers, on & on, each pluggable.
+
+ideally, we can late bound things. look for default impls at each lib layer, the code layer, but only as a fallback to the configured layer. if i divine IFS in voodoo-opt then ~/.config/voodoo-opt/IFS.js ought be able to overwrite. but that in turn is less than your-app's IFS & less in turn than ~/config/your-app/IFS.js.
+
+currently voodoo-opt relies on a lot of synchronous definitions of things, but these need to be made less so.
